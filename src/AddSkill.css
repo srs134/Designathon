@@ -1,0 +1,95 @@
+/* AddSkill.css */
+.add-skill-app {
+  background: black;
+  width: 100%; /* Ensure the background color covers the entire width */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  margin-top: 215px; /* Adjust for navbar height */
+  margin-left: 320px;
+  margin-right: 1820px;
+  margin-bottom:  100px;
+}
+
+.add-skill-app.recording {
+  background: darkred; /* Change background color when recording */
+}
+
+.add-skill-timer {
+  position: fixed;
+  top: 70px; /* Adjust for navbar height */
+  right: 20px;
+  font-size: 20px;
+  color: white;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.add-skill-timer span {
+  margin-right: 5px;
+}
+
+.add-skill-buttons {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: 20px;
+  z-index: 2;
+  margin-right: 500px;
+  margin-bottom: 100px;
+}
+
+.add-skill-talk-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #6200ea, #3700b3);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-skill-talk-button:hover {
+  background: linear-gradient(45deg, #3700b3, #6200ea);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.add-skill-input-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 600px;
+  z-index: 2;
+  margin-top: 20px;
+  margin-bottom: 170px;
+  margin-right: 600px;
+}
+
+.add-skill-input-box {
+  width: 100%;
+  height: 400px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  resize: none;
+  background: #f9f9f9;
+}
+
+.add-skill-input-box:focus {
+  border-color: #6200ea;
+  outline: none; /* Remove default outline */
+}
