@@ -9,6 +9,7 @@ import EmployeeSkills from './EmployeeSkills';
 import AddSkill from './AddSkill';
 import UpdateSkills from './UpdateSkills';
 import Admin from './Admin';
+import GithubSkills from './GithubSkills';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           <Route path="/home" element={<><Navbar /><Home /></>} />
           <Route path="/EmployeeSkills" element={<><Navbar /><EmployeeSkills /></>} />
           <Route path="/AddSkill" element={<><Navbar /><AddSkill /></>} />
-          <Route path="/UpdateSkills" element={<><Navbar /><UpdateSkills /></>} />
+          <Route path="/GithubSkills" element={<><Navbar /><GithubSkills /></>} />
           <Route path="/AddSkillOnly" element={<AddSkill />} /> {/* New route for AddSkill only */}
           <Route path="/admin" element={<Admin />} />
         </Routes>

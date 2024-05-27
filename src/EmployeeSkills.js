@@ -29,7 +29,7 @@ const EmployeeSkills = () => {
 
   return (
     <div className="container">
-      <h2 className="title">Employee Skills</h2>
+      <h2 className="title">Linkedln Skills</h2>
 
 
       <form className="form" onSubmit={handleSubmit}>
