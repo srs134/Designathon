@@ -2,19 +2,27 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginForm.css';
 
+
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
+    setErrorMessage(''); // Clear previous error message
 
-    // Navigate to the /home route after login
-    navigate('/home');
+    if (email === 'gundamr@hexaware.com') {
+      // Navigate to the /home route
+      navigate('/home');
+    } else if (email === 'admin@hexaware.com') {
+      // Navigate to the /admin route
+      navigate('/admin');
+    } else {
+      // Set an error message if the email is invalid
+      setErrorMessage('Invalid credentials');
+    }
   };
 
   return (
@@ -41,6 +49,7 @@ const LoginForm = () => {
             required 
           />
         </div>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
         <button type="submit">Login</button>
       </form>
     </div>
